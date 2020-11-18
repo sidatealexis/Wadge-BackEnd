@@ -7,45 +7,45 @@ import org.testng.annotations.*;
 import wadge.food_list.FoodList;
 
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+//import java.util.ArrayList;
+//import java.util.List;
+//import java.util.Map;
 
 import static org.testng.Assert.*;
 
 public class AppTest {
-    List<Map<String, Object>> foodList;
-    List<Map<String, Object>> filter;
-    List<Map<String, Object>> empty;
+//    List<Map<String, Object>> foodList;
+//    List<Map<String, Object>> filter;
+//    List<Map<String, Object>> empty;
 
     @Test public void appHasAGreeting() {
         // App classUnderTest = new App();
         // assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
     }
 
-    @BeforeMethod
-    public void setUp(){
-        foodList = new ArrayList<>();
-        foodList = FoodList.readFile("./src/test/resources/food_list_test.json");
-        filter = new ArrayList<>();
-        try{
-            filter = FoodList.foodFromMonth("janvier");
-        }catch(Exception e){
-            e.printStackTrace();
-        }
-    }
-    @AfterMethod
-    public void tearDown() {
-        foodList = null;
-        filter = null;
-        empty = null;
-    }
-//    @Test
-//    public void testGoodReadFile(){
-//        System.out.println(foodList);
-//        System.out.println(FoodList.readFile("./src/test/resources/food_list_test.json"));
-//        assertEquals(FoodList.readFile("./src/test/resources/food_list_test.json"), foodList);
+//    @BeforeMethod
+//    public void setUp(){
+//        foodList = new ArrayList<>();
+//        foodList = FoodList.readFile("./src/test/resources/food_list_test.json");
+//        filter = new ArrayList<>();
+//        try{
+//            filter = FoodList.foodFromMonth("janvier");
+//        }catch(Exception e){
+//            e.printStackTrace();
+//        }
 //    }
+//    @AfterMethod
+//    public void tearDown() {
+//        foodList = null;
+//        filter = null;
+//        empty = null;
+//    }
+////    @Test
+////    public void testGoodReadFile(){
+////        System.out.println(foodList);
+////        System.out.println(FoodList.readFile("./src/test/resources/food_list_test.json"));
+////        assertEquals(FoodList.readFile("./src/test/resources/food_list_test.json"), foodList);
+////    }
     @Test
     public void testBadStructureReadFile(){
         assertNotEquals(FoodList.readFile("./src/test/resources/food_test_bad_structure.json"), foodList);
