@@ -46,35 +46,35 @@ public class AppTest {
 ////        System.out.println(FoodList.readFile("./src/test/resources/food_list_test.json"));
 ////        assertEquals(FoodList.readFile("./src/test/resources/food_list_test.json"), foodList);
 ////    }
-    @Test
-    public void testBadStructureReadFile(){
-        assertNotEquals(FoodList.readFile("./src/test/resources/food_test_bad_structure.json"), foodList);
-
-    }
-    @Test
-    public void testFilterMonth(){
-        try {
-            assertEquals(FoodList.foodFromMonth("janvier"), filter);
-        }catch(Exception e){
-                e.printStackTrace();
-            }
-    }
-    @Test
-    public void testBadMonth(){
-        try {
-            assertEquals(FoodList.foodFromMonth("january"), filter);
-        }catch(Exception e){
-            e.printStackTrace();
-        }
-    }
-    @Test
-    public void testEmpty(){
-        try {
-            assertNotEquals(FoodList.foodFromMonth("janvier"), empty);
-        }catch(Exception e){
-            e.printStackTrace();
-        }
-    }
+//    @Test
+//    public void testBadStructureReadFile(){
+//        assertNotEquals(FoodList.readFile("./src/test/resources/food_test_bad_structure.json"), foodList);
+//
+//    }
+//    @Test
+//    public void testFilterMonth(){
+//        try {
+//            assertEquals(FoodList.foodFromMonth("janvier"), filter);
+//        }catch(Exception e){
+//                e.printStackTrace();
+//            }
+//    }
+//    @Test
+//    public void testBadMonth(){
+//        try {
+//            assertEquals(FoodList.foodFromMonth("january"), filter);
+//        }catch(Exception e){
+//            e.printStackTrace();
+//        }
+//    }
+//    @Test
+//    public void testEmpty(){
+//        try {
+//            assertNotEquals(FoodList.foodFromMonth("janvier"), empty);
+//        }catch(Exception e){
+//            e.printStackTrace();
+//        }
+//    }
 //    @Test
 //    public void testNoFile() {
 //            assertEquals(FoodList.readFile("./src/test/resources/food_list_empty.json"),empty);
