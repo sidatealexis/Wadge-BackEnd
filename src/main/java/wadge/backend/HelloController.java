@@ -45,11 +45,11 @@ public class HelloController {
 
         List<Map<String, Object>> list = null;
         try {
-             list = FoodList.foodFromMonth(month);
+            list = FoodList.foodFromMonth(month);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        
+
         return new ResponseEntity<>(list, HttpStatus.OK);
     }
 
@@ -75,6 +75,7 @@ public class HelloController {
 
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
+
     @ApiOperation(value = "Alerts the user on all his foods without exceptions")
     @RequestMapping(path = "/alerts", method= RequestMethod.GET)
     public ResponseEntity<Map<String, List<Map<String, String>>>> getExpirationAlerts() {
